@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<group android:checkableBehavior="single">
+
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/pizza"
+        android:title="Pizza"
+        android:icon="@drawable/ic_pizza"/>
+
+    <item
+        android:id="@+id/burger"
+        android:title="Burger"
+        android:icon="@drawable/ic_hamburger"/>
+
+
+    <item
+        android:icon="@drawable/admin"
+        android:id="@+id/admin"
+        android:title="Admin" />
+
+</group>
+
+
+
+    <item android:title="Developer">
+
+        <menu>
+
+            <item
+                android:id="@+id/about"
+                android:title="About" />
+
+        </menu>
+
+    </item>
+
+</menu>

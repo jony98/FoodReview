@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FoodDetailsActivity">
+
+    <include layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_food_detail"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/food_photo"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/food_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:textSize="24sp"
+            android:textColor="#F44336"
+            android:fontFamily="@font/open_sans_extra_bold"/>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/third_ratingbar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccent"
+                    android:rating="4.5"
+                    android:stepSize="0.5"
+                    tools:targetApi="lollipop"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/food_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text=""
+                    android:textColor="#F44336"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/third_rating_number2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="#F44336"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_bold"/>
+
+            <TextView
+                android:id="@+id/food_price"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="#F44336"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_bold"/>
+
+            <TextView
+                android:id="@+id/food_des"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:id="@+id/venue_type"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Venue Type"
+                android:textColor="#F44336"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_bold"/>
+
+            <TextView
+                android:id="@+id/venue_type_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Restaurant"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/type_of_view"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type of Food"
+                android:textColor="#F44336"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_bold"/>
+
+            <TextView
+                android:id="@+id/type_of_view_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:alpha="0.5"/>
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/buy_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:background="@drawable/btn_bg"
+            android:paddingLeft="50dp"
+            android:onClick="order"
+            android:paddingRight="50dp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</LinearLayout>
